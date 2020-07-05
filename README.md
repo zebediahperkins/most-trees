@@ -1,4 +1,4 @@
-<h1>treesjs</h1>
+<h1>most-trees</h1>
 <p>A small javascript library that allows you to implement most tree data structures</p>
 <h2>Features</h2>
 <ul></ul>
