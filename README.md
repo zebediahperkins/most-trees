@@ -8,12 +8,15 @@
     <code>> npm install most-trees</code>
 </pre>
 <p>Next, require the package, and use the assets you need:</p>
-```const mostTrees = require('most-trees');
 
-const ExpressionTree = mostTrees.ExpressionTree;
+```
+    const mostTrees = require('most-trees');
 
-let expTree = new ExpressionTree('3x*(2x+2)-83');
-console.log(expTree.solveTree()); //logs 6x(x+1)-83</code>
+    const ExpressionTree = mostTrees.ExpressionTree;
+
+    let expTree = new ExpressionTree('3x*(2x+2)-83');
+    console.log(expTree.solveTree()); //logs 6x(x+1)-83</code>
+```
 
 <h2>Documentation</h2>
 <ul></ul>
