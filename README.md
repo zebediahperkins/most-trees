@@ -9,10 +9,8 @@
 </pre>
 <p>Next, require the package, and use the assets you need:</p>
 <pre>
-    <code>const mostTrees = require('most-trees');
-
+const mostTrees = require('most-trees');
 const ExpressionTree = mostTrees.ExpressionTree;
-
 let expTree = new ExpressionTree('3x*(2x+2)-83');
 console.log(expTree.solveTree()); //logs 6x(x+1)-83</code>
 </pre>
