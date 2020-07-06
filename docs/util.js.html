@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: util.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: util.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const BinaryNode = require("./BinaryNode");
+
+/**
+ * Returns information regarding the operator of lowest precedence
+ * 
+ * @param {string[]} expression The expression whose operators are being analyzed
+ */
+const findLowestPrecedence = (expression) => {
+    let globalParenthesisDepth = 0;
+    let precedenceValues = { "lowestPrecedenceIndex": 0, "lowestPrecedenceOperator": null, "parenthesisDepth": 0 };
+    for (let i = 0; i &lt; expression.length; ++i) {
+        if (expression[i] === '(') ++globalParenthesisDepth; else if (expression[i] === ')') --globalParenthesisDepth;
+            if (!precedenceValues.lowestPrecedenceOperator) {
+                if (expression[i] === '+' || expression[i] === '-' || expression[i] === '*' || expression[i] === '/' || expression[i] === '^') {
+                    precedenceValues.lowestPrecedenceIndex = i;
+                    precedenceValues.lowestPrecedenceOperator = expression[i];
+                    precedenceValues.parenthesisDepth = globalParenthesisDepth;
+                }
+            }
+            switch (expression[i]) {
+                case '+':
+                case '-':
+                    if (globalParenthesisDepth &lt;= precedenceValues.parenthesisDepth) {
+                        precedenceValues.lowestPrecedenceIndex = i;
+                        precedenceValues.lowestPrecedenceOperator = expression[i];
+                        precedenceValues.parenthesisDepth = globalParenthesisDepth;
+                    }
+                    break;
+                case '*':
+                case '/':
+                case '%':
+                    if (globalParenthesisDepth &lt; precedenceValues.parenthesisDepth || (globalParenthesisDepth == precedenceValues.parenthesisDepth &amp;&amp; precedenceValues.lowestPrecedenceOperator !== '+' &amp;&amp; precedenceValues.lowestPrecedenceOperator !== '-')) {
+                        precedenceValues.lowestPrecedenceIndex = i;
+                        precedenceValues.lowestPrecedenceOperator = expression[i];
+                        precedenceValues.parenthesisDepth = globalParenthesisDepth;
+                    }
+                    break;
+                case '^':
+                    if (globalParenthesisDepth &lt; precedenceValues.parenthesisDepth || (globalParenthesisDepth == precedenceValues.parenthesisDepth &amp;&amp; precedenceValues.lowestPrecedenceOperator !== '+' &amp;&amp; precedenceValues.lowestPrecedenceOperator !== '-' &amp;&amp; precedenceValues.lowestPrecedenceOperator !== '*' &amp;&amp; precedenceValues.lowestPrecedenceOperator !== '/')) {
+                        precedenceValues.lowestPrecedenceIndex = i;
+                        precedenceValues.lowestPrecedenceOperator = expression[i];
+                        precedenceValues.parenthesisDepth = globalParenthesisDepth;
+                    }
+                    break;
+                default:
+                    break;
+            }
+    }
+    return precedenceValues;
+}
+
+/**
+ * Attemps to reconfigure a binary node's null pointers so they will each point to another node
+ * 
+ * @param {BinaryNode} node The node whose pointers are being built
+ * @param {string[]} expression The mathematical expression that will be used to build this node
+ */
+const buildNodePointers = (node, expression) => {
+    if (expression[0] === '(' &amp;&amp; expression[expression.length - 1] === ')') {
+        (() => {
+            for (let parenthesisDepth = 1, i = 1; i &lt; expression.length - 1; ++i) {
+                if (expression[i] === '(') ++parenthesisDepth; else if(expression[i] === ')') --parenthesisDepth;
+                if (parenthesisDepth &lt; 1) return;
+            }
+            expression.splice(expression.length - 1, expression.length);
+            expression.splice(0, 1);
+        })();
+    }
+    const splitIndex = findLowestPrecedence(expression).lowestPrecedenceIndex;
+    return new BinaryNode(
+        buildNode(expression.slice(0, splitIndex)),
+        buildNode(expression.slice(splitIndex + 1, expression.length)),
+        node.data
+    );
+}
+
+/**
+ * Builds a single node with null pointers. If this is the last node in the sequence, it will have a numeric/variable value, otherwise it will be an operator
+ * 
+ * @param {string} operator The value to be placed in this node if operator is defined and not null
+ * @param {string[]} expression The mathematical expression that will be used to build the pointers to the next nodes
+ * @returns {BinaryNode} A binary node
+ */
+const buildNode = (expression) => {
+    const lowestPrecedence = findLowestPrecedence(expression);
+    if (!lowestPrecedence.lowestPrecedenceOperator) return new BinaryNode(null, null, expression.join(''));
+    return buildNodePointers(
+        new BinaryNode(null, null, lowestPrecedence.lowestPrecedenceOperator),
+        expression
+        );
+}
+
+module.exports = {
+    "findLowestPrecedence": findLowestPrecedence,
+    "buildNodePointers": buildNodePointers,
+    "buildNode": buildNode
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BinaryNode.html">BinaryNode</a></li><li><a href="ExpressionTree.html">ExpressionTree</a></li></ul><h3>Global</h3><ul><li><a href="global.html#buildNode">buildNode</a></li><li><a href="global.html#buildNodePointers">buildNodePointers</a></li><li><a href="global.html#findLowestPrecedence">findLowestPrecedence</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Mon Jul 06 2020 00:09:09 GMT-0400 (Eastern Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
