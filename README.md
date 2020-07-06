@@ -2,7 +2,7 @@
 <p>A small javascript library that allows you to implement most tree data structures</p>
 <h2>Features</h2>
 <ul>
-    <li>Expression Trees</li>
+    <li><a href="https://zebediahperkins.github.io/most-trees/ExpressionTree.html">Expression Trees</a></li>
     <li>(Coming soon)Binary Search Trees</li>
     <li>(Coming soon)Self Balancing Binary Search Trees</li>
 </ul>
