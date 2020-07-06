@@ -17,6 +17,7 @@
   "author": "Zebediah Perkins",
   "license": "MIT",
   "devDependencies": {
+    "mathjs": "^7.0.2",
     "mocha": "^8.0.1"
   },
   "repository": {
@@ -26,5 +27,6 @@
   "bugs": {
     "url": "https://github.com/zebediahperkins/most-trees/issues"
   },
-  "homepage": "https://github.com/zebediahperkins/most-trees/blob/master/README.md"
+  "homepage": "https://github.com/zebediahperkins/most-trees/blob/master/README.md",
+  "dependencies": {}
 }
