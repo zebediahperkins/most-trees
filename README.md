@@ -8,8 +8,7 @@
     <code>> npm install most-trees</code>
 </pre>
 <p>Next, require the package, and use the assets you need:</p>
-```
-const mostTrees = require('most-trees');
+```const mostTrees = require('most-trees');
 
 const ExpressionTree = mostTrees.ExpressionTree;
 
