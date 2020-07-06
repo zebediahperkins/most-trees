@@ -1,6 +1,6 @@
 <h1>most-trees</h1>
 <p>A small javascript library that allows you to implement most tree data structures</p>
-<h2>Features</h2>
+<h2>Features/Documentation</h2>
 <ul>
     <li><a href="https://zebediahperkins.github.io/most-trees/ExpressionTree.html">Expression Trees</a></li>
     <li><a href="https://zebediahperkins.github.io/most-trees/BinaryNode.html">Binary Node</a></li>
