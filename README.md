@@ -5,18 +5,18 @@
 <h2>Usage</h2>
 <p>Install most-trees using npm:</p>
 <pre>
-    <code>>npm install most-trees</code>
+    <code>> npm install most-trees</code>
 </pre>
 <h2>Documentation</h2>
 <ul></ul>
 <h2>Testing</h2>
 <p>To run testing for this library, install the dev-dependencies with:</p>
 <pre>
-    <code>>npm install</code>
+    <code>> npm install</code>
 </pre>
 <p>Then, execute the tests:</p>
 <pre>
-    <code>>npm test</code>
+    <code>> npm test</code>
 </pre>
 <h2>License</h2>
 <p>MIT License</p><br>
