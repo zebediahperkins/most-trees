@@ -9,14 +9,16 @@
 </pre>
 <p>Next, require the package, and use the assets you need:</p>
 <pre>
-```
-const mostTrees = require('most-trees');
+    <code>
+        ```
+        const mostTrees = require('most-trees');
 
-const ExpressionTree = mostTrees.ExpressionTree;
+        const ExpressionTree = mostTrees.ExpressionTree;
 
-let expTree = new ExpressionTree('3x*(2x+2)-83');
-console.log(expTree.solveTree()); //logs 6x(x+1)-83</code>
-```
+        let expTree = new ExpressionTree('3x*(2x+2)-83');
+        console.log(expTree.solveTree()); //logs 6x(x+1)-83</code>
+        ```
+    </code>
 </pre>
 <h2>Documentation</h2>
 <ul></ul>
