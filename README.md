@@ -3,6 +3,7 @@
 <h2>Features</h2>
 <ul>
     <li><a href="https://zebediahperkins.github.io/most-trees/ExpressionTree.html">Expression Trees</a></li>
+    <li><a href="https://zebediahperkins.github.io/most-trees/BinaryNode.html">Binary Node</a></li>
     <li>(Coming soon)Binary Search Trees</li>
     <li>(Coming soon)Self Balancing Binary Search Trees</li>
 </ul>
@@ -16,10 +17,10 @@
 ```javascript
     const mostTrees = require('most-trees');
 
-    const ExpressionTree = mostTrees.ExpressionTree;
+    const ExpressionTree = mostTrees.ExpressionTree; //grab the ExpressionTree class
 
     let expTree = new ExpressionTree('3x*(2x+2)-83');
-    console.log(expTree.solveTree()); //logs 6x(x+1)-83</code>
+    console.log(expTree.solveTree()); //logs 6x(x+1)-83
 ```
 
 <h2>Testing</h2>
