@@ -1,7 +1,17 @@
 <h1>most-trees</h1>
 <p>A small javascript library that allows you to implement most tree data structures</p>
 <h2>Features</h2>
-<ul></ul>
+<ul>
+    <li>Expression Trees</li>
+    <li>(Coming soon)General Trees</li>
+    <li>(Coming soon)Binary Trees</li>
+    <li>(Coming soon)Binary Search Trees</li>
+    <li>(Coming soon)AVL Trees (Self balancing binary)</li>
+    <li>(Coming soon)Red-Black Trees</li>
+    <li>(Coming soon)Splay Trees</li>
+    <li>(Coming soon)Treap</li>
+    <li>(Coming soon)B-tree</li>
+</ul>
 <h2>Usage</h2>
 <p>Install most-trees using npm:</p>
 <pre>
@@ -18,8 +28,6 @@
     console.log(expTree.solveTree()); //logs 6x(x+1)-83</code>
 ```
 
-<h2>Documentation</h2>
-<ul></ul>
 <h2>Testing</h2>
 <p>To run testing for this library, install the dev-dependencies with:</p>
 <pre>
