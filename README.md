@@ -9,7 +9,7 @@
 </pre>
 <p>Next, require the package, and use the assets you need:</p>
 
-```
+```javascript
     const mostTrees = require('most-trees');
 
     const ExpressionTree = mostTrees.ExpressionTree;
