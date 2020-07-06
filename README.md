@@ -3,14 +3,8 @@
 <h2>Features</h2>
 <ul>
     <li>Expression Trees</li>
-    <li>(Coming soon)General Trees</li>
-    <li>(Coming soon)Binary Trees</li>
     <li>(Coming soon)Binary Search Trees</li>
-    <li>(Coming soon)AVL Trees (Self balancing binary)</li>
-    <li>(Coming soon)Red-Black Trees</li>
-    <li>(Coming soon)Splay Trees</li>
-    <li>(Coming soon)Treap</li>
-    <li>(Coming soon)B-tree</li>
+    <li>(Coming soon)Self Balancing Binary Search Trees</li>
 </ul>
 <h2>Usage</h2>
 <p>Install most-trees using npm:</p>
