@@ -2,10 +2,10 @@
 <p>A small javascript library that allows you to implement most tree data structures</p>
 <h2>Features/Documentation</h2>
 <ul>
+    <li><a href="https://zebediahperkins.github.io/most-trees/BinaryTree.html">Binary Search Trees</a></li>
+    <li>(Coming soon)Self Balancing Binary Search Trees</li>
     <li><a href="https://zebediahperkins.github.io/most-trees/ExpressionTree.html">Expression Trees</a></li>
     <li><a href="https://zebediahperkins.github.io/most-trees/BinaryNode.html">Binary Node</a></li>
-    <li>(Coming soon)Binary Search Trees</li>
-    <li>(Coming soon)Self Balancing Binary Search Trees</li>
 </ul>
 <h2>Usage</h2>
 <p>Install most-trees using npm:</p>
@@ -15,12 +15,15 @@
 <p>Next, require the package, and use the assets you need:</p>
 
 ```javascript
-    const mostTrees = require('most-trees');
-
-    const ExpressionTree = mostTrees.ExpressionTree; //grab the ExpressionTree class
+    const { ExpressionTree, BinaryTree } = require('most-trees');
 
     let expTree = new ExpressionTree('3x*(2x+2)-83');
     console.log(expTree.solveTree()); //logs 6x(x+1)-83
+
+    let bst = new BinaryTree([1, 2, 5, -51, 3, -14]);
+    bst.insert(142);
+    if (bst.search(3)) bst.remove(3);
+    console.log(bst.toArray());
 ```
 
 <h2>Testing</h2>
