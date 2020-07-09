@@ -192,7 +192,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="BinaryNode.js.html">BinaryNode.js</a>, <a href="BinaryNode.js.html#line10">line 10</a>
+        <a href="BinaryNode.js.html">BinaryNode.js</a>, <a href="BinaryNode.js.html#line12">line 12</a>
     </li></ul></dd>
     
 
@@ -286,7 +286,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="BinaryNode.js.html">BinaryNode.js</a>, <a href="BinaryNode.js.html#line16">line 16</a>
+        <a href="BinaryNode.js.html">BinaryNode.js</a>, <a href="BinaryNode.js.html#line18">line 18</a>
     </li></ul></dd>
     
 
@@ -348,7 +348,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="BinaryNode.js.html">BinaryNode.js</a>, <a href="BinaryNode.js.html#line12">line 12</a>
+        <a href="BinaryNode.js.html">BinaryNode.js</a>, <a href="BinaryNode.js.html#line14">line 14</a>
     </li></ul></dd>
     
 
@@ -410,7 +410,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="BinaryNode.js.html">BinaryNode.js</a>, <a href="BinaryNode.js.html#line14">line 14</a>
+        <a href="BinaryNode.js.html">BinaryNode.js</a>, <a href="BinaryNode.js.html#line16">line 16</a>
     </li></ul></dd>
     
 
@@ -430,6 +430,325 @@
     
 
     
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="searchTreeInsert"><span class="type-signature"></span>searchTreeInsert<span class="signature">(value, comparator, node)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Attempt to insert a value
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The value to insert</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>comparator</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The comparator(val1, val2) function that will be used to compare two values, defaults to aritmetic comparator if undefined</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>node</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="BinaryNode.html">BinaryNode</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The node being evaluated, defaults to this.root if undefined</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="BinaryNode.js.html">BinaryNode.js</a>, <a href="BinaryNode.js.html#line28">line 28</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    whether or not the value was successfully inserted
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="toArray"><span class="type-signature"></span>toArray<span class="signature">()</span><span class="type-signature"> &rarr; {Array}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Return this tree as an array of it's values, will be sorted if the tree is a bst
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="BinaryNode.js.html">BinaryNode.js</a>, <a href="BinaryNode.js.html#line48">line 48</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    this tree as a sorted array of values
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+    
 
     
 
@@ -444,13 +763,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BinaryNode.html">BinaryNode</a></li><li><a href="ExpressionTree.html">ExpressionTree</a></li></ul><h3>Global</h3><ul><li><a href="global.html#buildNode">buildNode</a></li><li><a href="global.html#buildNodePointers">buildNodePointers</a></li><li><a href="global.html#findLowestPrecedence">findLowestPrecedence</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BinaryNode.html">BinaryNode</a></li><li><a href="BinaryTree.html">BinaryTree</a></li><li><a href="ExpressionTree.html">ExpressionTree</a></li></ul><h3>Global</h3><ul><li><a href="global.html#equals">equals</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Mon Jul 06 2020 00:09:09 GMT-0400 (Eastern Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Thu Jul 09 2020 19:27:31 GMT-0400 (Eastern Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>

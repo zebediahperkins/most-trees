@@ -146,7 +146,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ExpressionTree.js.html">ExpressionTree.js</a>, <a href="ExpressionTree.js.html#line12">line 12</a>
+        <a href="ExpressionTree.js.html">ExpressionTree.js</a>, <a href="ExpressionTree.js.html#line11">line 11</a>
     </li></ul></dd>
     
 
@@ -240,7 +240,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ExpressionTree.js.html">ExpressionTree.js</a>, <a href="ExpressionTree.js.html#line14">line 14</a>
+        <a href="ExpressionTree.js.html">ExpressionTree.js</a>, <a href="ExpressionTree.js.html#line13">line 13</a>
     </li></ul></dd>
     
 
@@ -302,7 +302,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ExpressionTree.js.html">ExpressionTree.js</a>, <a href="ExpressionTree.js.html#line16">line 16</a>
+        <a href="ExpressionTree.js.html">ExpressionTree.js</a>, <a href="ExpressionTree.js.html#line15">line 15</a>
     </li></ul></dd>
     
 
@@ -323,6 +323,348 @@
 
     
         <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="buildNode"><span class="type-signature"></span>buildNode<span class="signature">(operator, expression)</span><span class="type-signature"> &rarr; {<a href="BinaryNode.html">BinaryNode</a>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Builds a single node with null pointers. If this is the last node in the sequence, it will have a numeric/variable value, otherwise it will be an operator
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>operator</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The value to be placed in this node if operator is defined and not null</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>expression</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The mathematical expression that will be used to build the pointers to the next nodes</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="ExpressionTree.js.html">ExpressionTree.js</a>, <a href="ExpressionTree.js.html#line119">line 119</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A binary node
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="BinaryNode.html">BinaryNode</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="buildNodePointers"><span class="type-signature"></span>buildNodePointers<span class="signature">(node, expression)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Attemps to reconfigure a binary node's null pointers so they will each point to another node
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>node</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="BinaryNode.html">BinaryNode</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The node whose pointers are being built</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>expression</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The mathematical expression that will be used to build this node</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="ExpressionTree.js.html">ExpressionTree.js</a>, <a href="ExpressionTree.js.html#line93">line 93</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         
             
@@ -431,7 +773,144 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ExpressionTree.js.html">ExpressionTree.js</a>, <a href="ExpressionTree.js.html#line24">line 24</a>
+        <a href="ExpressionTree.js.html">ExpressionTree.js</a>, <a href="ExpressionTree.js.html#line23">line 23</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="findLowestPrecedence"><span class="type-signature"></span>findLowestPrecedence<span class="signature">(expression)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Returns information regarding the operator of lowest precedence
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>expression</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The expression whose operators are being analyzed</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="ExpressionTree.js.html">ExpressionTree.js</a>, <a href="ExpressionTree.js.html#line43">line 43</a>
     </li></ul></dd>
     
 
@@ -519,7 +998,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ExpressionTree.js.html">ExpressionTree.js</a>, <a href="ExpressionTree.js.html#line35">line 35</a>
+        <a href="ExpressionTree.js.html">ExpressionTree.js</a>, <a href="ExpressionTree.js.html#line34">line 34</a>
     </li></ul></dd>
     
 
@@ -565,13 +1044,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BinaryNode.html">BinaryNode</a></li><li><a href="ExpressionTree.html">ExpressionTree</a></li></ul><h3>Global</h3><ul><li><a href="global.html#buildNode">buildNode</a></li><li><a href="global.html#buildNodePointers">buildNodePointers</a></li><li><a href="global.html#findLowestPrecedence">findLowestPrecedence</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BinaryNode.html">BinaryNode</a></li><li><a href="BinaryTree.html">BinaryTree</a></li><li><a href="ExpressionTree.html">ExpressionTree</a></li></ul><h3>Global</h3><ul><li><a href="global.html#equals">equals</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Mon Jul 06 2020 00:09:09 GMT-0400 (Eastern Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Thu Jul 09 2020 19:27:31 GMT-0400 (Eastern Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>
