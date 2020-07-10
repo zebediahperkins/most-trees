@@ -26,7 +26,7 @@
     let bst = new BinaryTree([1, 2, 5, -51, 3, -14]);
     bst.insert(142);
     if (bst.search(3)) if (bst.remove(3)) console.log('removed 3 from tree');
-    console.log(bst.toArray());
+    console.log(bst.toArray()); //logs [-51, -14, 1, 2, 5, 142]
 ```
 
 <h2>Testing</h2>

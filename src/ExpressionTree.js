@@ -1,4 +1,4 @@
-const mathjs = require('mathjs');
+const { simplify } = require('mathjs');
 const BinaryNode = require('./BinaryNode');
 
 /** A specific kind of a binary tree used to represent expressions */
@@ -32,7 +32,7 @@ class ExpressionTree {
 
     /** Solve the current expression */
     solveTree() {
-        return mathjs.simplify(this.expressionString).toString().replace(/\s/g, '');
+        return simplify(this.expressionString).toString().replace(/\s/g, '');
     }
 
     /**
