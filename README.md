@@ -1,6 +1,6 @@
 <h1>most-trees</h1>
 <p>A small javascript library that allows you to implement most tree data structures</p>
-<h2>Features/Documentation</h2>
+<h2>Features/<a href="https://zebediahperkins.github.io/most-trees/index.html">Documentation</a></h2>
 <ul>
     <li><a href="https://zebediahperkins.github.io/most-trees/BinaryTree.html">Binary Search Trees</a></li>
     <li>(Coming soon)Self Balancing Binary Search Trees</li>
