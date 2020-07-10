@@ -10,9 +10,11 @@
 </ul>
 <h2>Usage</h2>
 <p>Install most-trees using npm:</p>
-<pre>
-    <code>> npm install most-trees</code>
-</pre>
+
+```
+    > npm install most-trees
+```
+
 <p>Next, require the package, and use the assets you need:</p>
 
 ```javascript
@@ -23,19 +25,23 @@
 
     let bst = new BinaryTree([1, 2, 5, -51, 3, -14]);
     bst.insert(142);
-    if (bst.search(3)) bst.remove(3);
+    if (bst.search(3)) if (bst.remove(3)) console.log('removed 3 from tree');
     console.log(bst.toArray());
 ```
 
 <h2>Testing</h2>
 <p>To run testing for this library, install the dev-dependencies with:</p>
-<pre>
-    <code>> npm install</code>
-</pre>
+
+```
+    > npm install
+```
+
 <p>Then, execute the tests:</p>
-<pre>
-    <code>> npm test</code>
-</pre>
+
+```
+    > npm test
+```
+
 <h2>License</h2>
 <p>MIT License</p><br>
 <p>Copyright (c) 2020 Zebediah Perkins</p><br>
