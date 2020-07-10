@@ -1,4 +1,9 @@
-<h1>most-trees</h1>
+<h1>
+    most-trees 
+    ![downloads](https://img.shields.io/npm/dt/most-trees.svg)
+    ![monthly downloads](https://img.shields.io/npm/dm/most-trees.svg)
+
+</h1>
 <p>A small javascript library that allows you to implement most tree data structures</p>
 <h2>Features/Documentation</h2>
 <ul>
