@@ -1,6 +1,6 @@
 {
   "name": "most-trees",
-  "version": "2.1.3",
+  "version": "2.1.4",
   "description": "A small javascript library that allows you to implement most tree data structures",
   "main": "index.js",
   "scripts": {
