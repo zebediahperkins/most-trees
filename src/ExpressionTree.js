@@ -124,6 +124,15 @@ class ExpressionTree {
             expression
             );
     }
+    
+    /**
+     * Check if an object is equal to this object
+     * 
+     * @param {*} obj The object that will be compared with this object
+     */
+    isEqual(obj) {
+        return this.solveTree() === obj.solveTree();
+    }
 }
 
 module.exports = ExpressionTree;
