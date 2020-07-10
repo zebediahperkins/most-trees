@@ -1,11 +1,4 @@
-<h1>
-most-trees<br>
-<img src="https://img.shields.io/npm/dt/most-trees.svg">
-<img src="https://img.shields.io/npm/dm/most-trees.svg">
-<img src="https://img.shields.io/github/forks/zebediahperkins/most-trees">
-<img src="https://img.shields.io/github/stars/zebediahperkins/most-trees">
-<img src="https://img.shields.io/github/license/zebediahperkins/most-trees">
-</h1>
+<h1>most-trees<br><img src="https://img.shields.io/npm/dt/most-trees.svg"> <img src="https://img.shields.io/npm/dm/most-trees.svg"> <img src="https://img.shields.io/github/forks/zebediahperkins/most-trees"> <img src="https://img.shields.io/github/stars/zebediahperkins/most-trees"> <img src="https://img.shields.io/github/license/zebediahperkins/most-trees"></h1>
 
 <p>A small javascript library that allows you to implement most tree data structures</p>
 <h2>Features/<a href="https://zebediahperkins.github.io/most-trees/index.html">Documentation</a></h2>
