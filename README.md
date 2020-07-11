@@ -21,7 +21,6 @@
     const { ExpressionTree, BinaryTree } = require('most-trees');
 
     let expTree = new ExpressionTree('3x*(2x+2)-83');
-    console.log(expTree.solveTree()); //logs 6x(x+1)-83
 
     let bst = new BinaryTree([1, 2, 5, -51, 3, -14]);
     bst.insert(142);

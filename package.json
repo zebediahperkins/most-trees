@@ -1,6 +1,6 @@
 {
   "name": "most-trees",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "description": "A small javascript library that allows you to implement most tree data structures",
   "main": "index.js",
   "scripts": {
@@ -18,9 +18,6 @@
   ],
   "author": "Zebediah Perkins",
   "license": "MIT",
-  "dependencies": {
-    "mathjs": "^7.0.2"
-  },
   "devDependencies": {
     "mocha": "^8.0.1"
   },

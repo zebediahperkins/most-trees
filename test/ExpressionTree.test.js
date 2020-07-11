@@ -48,15 +48,6 @@ describe('ExpressionTree', () => {
             assert.strictEqual(tree.right.right.right.data, 'x');
         });
     });
-    
-    describe('#solveTree', () => {
-        it('should return the simplified value of the tree without variables', () => {
-            assert.strictEqual(new ExpressionTree('6+7-4').solveTree(), '9');
-        });
-        it('should return the simplified value of the tree with variables', () => {
-            assert.strictEqual(new ExpressionTree('6+7-4*x').solveTree(), '13-4*x');
-        });
-    });
 
     describe('#findLowestPrecedence', () => {
         it('should find the lowest precedence operator', () => {

@@ -1,4 +1,3 @@
-const { simplify } = require('mathjs');
 const BinaryNode = require('./BinaryNode');
 
 /** A specific kind of a binary tree used to represent expressions */
@@ -28,11 +27,6 @@ class ExpressionTree {
         if (!node.data) node.data = expressionString;
         else node = this.buildNodePointers(node, expression);
         return node;
-    }
-
-    /** Solve the current expression */
-    solveTree() {
-        return simplify(this.expressionString).toString().replace(/\s/g, '');
     }
 
     /**
